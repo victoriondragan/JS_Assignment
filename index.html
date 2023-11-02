@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Java Script Playground</h1>
+<p>Use below java script to try out learning pathway Java Script assignment</p>
+
+<h3><b>1. Data Types Assignments:</b></h3>
+<p>1. Define two numbers and add together and print the result</p>
+    <p id="dataTypeAssignments_1"></p>
+<p>2. Define two BigInt numbers and multiply them and print the result</p>
+    <p id="dataTypeAssignments_2"></p>
+<p>3. Define two Strings and concatenate both together and print</p>
+    <p id="dataTypeAssignments_3"></p>
+<p>4. Define a Boolean variable and print the value in HTML page</p>
+    <p id="dataTypeAssignments_4"></p>
+<p>5. Define a String array of 5 items and print them accessing individual item</p>
+<p id="dataTypeAssignments_5"></p>
+<h3><b>2. Arithmetic operators Assignment:</b></h3>
+    <p id="arithOpAssignment"></p>
+<h3><b>3.0 Comparison and logical operators Assignment:</b></h3>
+        <p id="CompAndLogic1"></p>
+<h3><b>3.1 Comparison and logical operators && Assignment:</b></h3>
+<p>Assign numerical values to a, b, and c variables and return corresponding ascending order</p>
+<p>Case: a = 3; b = 1; c = 2</p>
+    <p id="CompAndLogic2"></p>
+<h3><b>3.2 Comparison and logical operators || Assignment:</b></h3>
+<p>When a and b have fixed values and are not equal, find position of x</p>
+<p>Case: a = 2; b = 8; x = 1</p>
+    <p id="CompAndLogic3"></p>
+<h3><b>3.2 Comparison and logical operators ! Assignment:</b></h3>
+<p>Given rock, scissor, paper game, print the winner</p>
+<p>Case: rock = true; scissor = true; paper = false;</p>
+    <p id="CompAndLogic4"></p>
+<h3><b>4. Control Statements Assignment</b></h3>
+<p><b>Switch:</b>: Alert and print day of the week based on given day number:</p>
+<p>Case: day = 1</p>
+    <p id="control_switch"></p>
+<p><b>For and For In:</b> Print all numbers to 5 in an array using For loop. Print all numbers in "<br>
+    array using For In"</p>
+    <p id="control_for"></p>
+    <p id="control_forin"></p>
+<p><b>While and Do While:</b> Print all numbers to 5 in an array using While loop. Print all numbers in "<br>
+        array using Do While"</p>
+    <p id="while"></p>
+    <p id="dowhile"></p>
+<p><b>Functions:</b> Print Hello World / print result of adding 5 and 6, <br> 
+        print result of a function with both string and number paramaters "</p>
+    <p id="function1"></p>
+    <p id="function2"></p>
+    <p id="function3"></p>
+<p><b>Try ... Catch ... Finally</b> Check if the value given is between 1900 and 2024 "<br>
+    <input id="year" type="text"> <br><br>
+    <button type="button" onclick="checkYear()">Check year</button> 
+    <p id="validYear"></p>
+    <p id="year"></p><br> 
+<p><b>Strings methods: </b> Give example for each string method"</p>
+<p>1. charAt() -> index 7</p>
+<p id="charAT"></p>
+<p>2. concat()</p>
+<p id="concat"></p>
+<p>3. indexOf()</p>
+<p id="indexOf"></p>
+<p>4. match()</p>
+<p id="match"></p>
+<p>5. replace()</p>
+<p id="replace"></p>
+<p>6. search()</p>
+<p id="search"></p>
+<p>7. split()</p>
+<p id="split"></p>
+<p>8. substring()</p>
+<p id="substring"></p>
+<p>9. toUpperCase()</p>
+<p id="uppercase"></p>
+<p>10. valueOf()</p>
+<p id="valueOf"></p><br> 
+<p><b>Regex: </b> Give example for following regex:"</p>
+<p>1. Email pattern</p>
+<p id="email1"></p>
+<p id="email2"></p>
+<p>2. Numbers only pattern</p>
+<p id="message1"></p>
+<p id="message2"></p>
+<p>3. International phone number</p>
+<p id="phone1"></p>
+<p id="phone2"></p>
+<p>4. File path</p>
+<p id="path1"></p>
+<p id="path2"></p>
+<p>5. Find HTML tags</p>
+<p id="bold1"></p>
+<p id="bold2"></p><br> 
+<p><b>Objects: </b> Access Person class from a different script and print: <br> 
+    name / dob / address / passport - then print address on separate lines and calculate age </p>
+    <p id="name"></p>
+    <p id="dob"></p>
+    <p id="passport"></p>
+    <p id="age"></p>
+    <p id="address"></p>
+    <p>Address printed on separate lines</p>
+    <p id="countryLine"></p>
+    <p id="townLine"></p>
+    <p id="streetLine"></p>
+
+    
+
+<script>
+    //1. Data Types Assignments:
+var x = 11;
+var y = 99;
+var z = x + y;
+document.getElementById("dataTypeAssignments_1").innerHTML = "The sum of 11 and 99 is: " + z;
+var a = 123456789987456n;
+var b = 987456321236547n;
+document.getElementById("dataTypeAssignments_2").innerHTML = "Multiplication result of 123456789987456 and 987456321236547 is:  " + a * b;
+var name = "John";
+var surname = "Smith";
+document.getElementById("dataTypeAssignments_3").innerHTML = "Name is " + name + " and the Surname is "
++ surname; 
+let isDivisibleBy_2 = true;
+var number = 200;
+let answer = isDivisibleBy_2.toString();
+document.getElementById("dataTypeAssignments_4").innerHTML = "Q: Is the number 200 divisible by 2? A: " + answer;
+const planets = ["Mercury", "Venus", "Earth", "Mars", "Jupiter"];
+document.getElementById("dataTypeAssignments_5").innerHTML = "The order of the first five planets from the Sun is as follows: " + planets[0].toString() + ", " + 
+planets[1].toString() + ", " + planets[2].toString() + ", " + planets[3].toString() + ", " + planets[4].toString()
+</script>
+
+
+<script>
+    //2. Arithmetic operators Assignment:
+var a = 77;
+var b = 55;
+var sum = a+b;
+var substract = a-b;
+var multiply = a*b;
+var divide = a/b;
+var modulus = b%2;
+var increment1 = ++a;
+var decrement1 = --b
+document.getElementById("arithOpAssignment").innerHTML 
+= "1. + Adds two numeric operands result is: " + sum + "<br><br>" +
+  "2  -  Subtract right operand from left operand result is: " + substract + "<br><br>" +
+  "3. *  Multiply two numeric operands result is: " + multiply + "<br><br>" +
+  "4. /  Divide left operand by right operand result is: " + divide + "<br><br>" +
+  "5. %  Modulus operator. Returns remainder of two operands result is: " + modulus + "<br><br>" +
+  "6. ++ Increment operator. Increase operand value by one result is: " + increment1 + "<br><br>" +
+  "7. -- Decrement operator. Decrease value by one result is: " + decrement1;
+</script>
+
+<script>
+    //3.0 Comparison and logical operators Assignment:
+    var a = 55;
+    var b = 55;
+    if(a == b){
+    areEqual = "Yes, operands are equal.";
+    }
+    
+    var string = "John";
+    var number = 99;
+    if ( string === number){
+    haveSameType = "Operands are of the same type";
+    } else {
+    haveSameType = "Operands are not of the same type";
+    }
+    
+    var a = 77;
+    var b = 66;
+    if (a !=b ){
+    areNotEqual = "The operands are not equal"
+    }
+    
+    var a = 77;
+    var b = 88;
+    let ifLeftSideIsGreater = true;
+    if (a > b){
+    ifLeftSideIsGreater = "true";
+    }else {
+    ifLeftSideIsGreater = "false";
+    }
+    
+    var a = 88;
+    var b = 77;
+    let ifLeftSideIsLess = true;
+    if (a < b){
+    ifLeftSideIsLess = "true";
+    }else {
+    ifLeftSideIsLess = "false";
+    }
+    
+    var a = 77;
+    var b = 77;
+    let ifLeftSideIsGreterOrEqual = true;
+    if (a >= b){
+    ifLeftSideIsGreterOrEqual = "true";
+    }else {
+    ifLeftSideIsGreterOrEqual = "false";
+    }
+    
+    var a = 11;
+    var b = 77;
+    let ifLeftSideIsLessOrEqual = true;
+    if (a <= b){
+    ifLeftSideIsLessOrEqual = "true";
+    }else {
+    ifLeftSideIsLessOrEqual = "false";
+    }
+    
+    document.getElementById("CompAndLogic1").innerHTML = "1. == Compares the equality of two operands without considering type." + "<br>" +
+    "Are the following operands equal? A=55; B=55? Answer: " + "<br>" + areEqual + "<br><br>" +
+    "2. === Compares equality of two operands with type."  + "<br>" +
+    "Are the following operands of the same type? A=John; B=99? Answer: " + "<br>" + haveSameType + "<br><br>" +
+    "3. != Compares inequality of two operands."  + "<br>" +
+    "Are the following operands not equal? A=77; B=88? Answer: " + "<br>" + areNotEqual + "<br><br>" +
+    "4. > Returns a boolean value true if the left-side value is greater than the right-side value; otherwise, returns false." + "<br>" +
+    "If a > b return true, otherwise return false. A=77; B=88 Answer: " + "<br>" + ifLeftSideIsGreater + "<br><br>" +
+    "5. < Returns a boolean value true if the left-side value is less than the right-side value; otherwise, returns false." + "<br>" +
+    "If a < b return true, otherwise return false. A=77; B=88 Answer: " + "<br>" + ifLeftSideIsLess + "<br><br>" +
+    "6. >= Returns a boolean value true if the left-side value is greater than or equal to the right-side value; otherwise, returns false." + "<br>" +
+    "If a >= b return true, otherwise return false. A=77; B=77 Answer: " + "<br>" + ifLeftSideIsGreterOrEqual + "<br><br>" +
+    "7. <= Returns a boolean value true if the left-side value is less than or equal to the right-side value; otherwise, returns false."  + "<br>" +
+    "If a <= b return true, otherwise return false. A=77; B=88 Answer: " + "<br>" + ifLeftSideIsLessOrEqual;
+    </script>
+
+<script>
+    //3.1 Comparison and logical operators && Assignment:
+    var a = 3;
+    var b = 1;
+    var c = 2;
+    if ((a<c && b>c && a<b))
+    { orderIs = "a c b";} 
+    else if ((a<c && b<c && a<b)){
+    orderIs = "a b c";
+    } else if ((a>c && b>c && a<b)){
+    orderIs = "c a b";
+    } else if ((a>c && b<c && a>b)){
+    orderIs = "b c a";
+    } else if ((a<c && b<c && a>b)){
+    orderIs = "b a c";
+    } else {
+    orderIs = "c b a";
+    }
+    document.getElementById("CompAndLogic2").innerHTML = "Order is: " + orderIs;
+    </script>
+
+<script>
+    //3.2 Comparison and logical operators || Assignment:
+    var a = 2
+    var x = 1
+    var b = 8 	
+    var xPosition = "";
+    if ((a<b && x>a && x<b) || (a>b && x<a && x>b)){
+    xPosition = "x position: a < x < b";
+    } else if (x < a) {
+    xPosition = "x position: x < a < b";
+    } else {
+    xPosition = "x position: a < b < x";
+    }
+    document.getElementById("CompAndLogic3").innerHTML = xPosition;
+    </script>
+
+<script>
+    //3.3 Comparison and logical operators ! Assignment:
+    const rock = true;
+    const scissor = true;
+    const paper = false;
+    if (!rock){
+    winner = "scissor wins";
+    }else if (!paper) {
+    winner = "rock wins";
+    } else {
+    winner = "paper wins";
+    }
+    document.getElementById("CompAndLogic4").innerHTML =winner;
+    </script>
+
+<script>
+    //Control Statements Assignment: Switch
+    var day = 1; 
+    switch (day) { 
+    case 1: alert('case 1 executed'); day = "Monday";
+    break; 
+    case 2: alert("case 2 executed"); day = "Tuesday";
+    break; 
+    case 3: alert("case 3 executed"); day = "Wednesday";
+    break; 
+    case 4: alert("case 4 executed"); day = "Thursday";
+    break; 
+    case 5: alert("case 5 executed"); day = "Friday";
+    break; 
+    case 6: alert("case 6 executed"); day = "Saturday";
+    break; 
+    case 7: alert("case 7 executed"); day = "Sunday";
+    break;
+    default:
+    alert("default case executed");
+    day = "not a valid number"
+    }
+    document.getElementById("control_switch").innerHTML = day;
+    </script>
+
+<script>
+    //For and For In
+	const myArray1 = new Array()
+	for(let i=5; i<30; i+=5)
+	{
+		myArray1.push(i);
+	}
+document.getElementById("control_for").innerHTML = myArray1;
+
+let order1 ="";
+	for (let x in myArray1)
+    {
+		order1 += myArray1[x] + "<br>";
+	}
+document.getElementById("control_forin").innerHTML = order1;
+</script>
+
+<script>
+    //While and Do While
+    const myArray2 = new Array()
+    let t = 0;
+    while (t < 30 ) {
+      myArray2.push(t);
+      t+=5;
+    } 
+    document.getElementById("while").innerHTML = myArray2;  
+    let order2 ="";
+    let j = 0;
+    do { order2 += myArray2[j] +"<br>"; j++;}
+    while (j < myArray2.length)
+    document.getElementById("dowhile").innerHTML = order2;
+    </script>
+
+<script>
+    function greeting(text) {
+    return text;  
+    }
+    let text = "Hello World";
+    document.getElementById("function1").innerHTML = text;
+    
+    function add(x, y) {
+      return x + y;
+    }
+    let result = add(5, 6);
+    document.getElementById("function2").innerHTML = result;
+    
+    function today(day, month){
+    let todayDate = "Today is " + day + " " + month;
+    return todayDate;
+    }
+    printDate = today(30, "October");
+    document.getElementById("function3").innerHTML = printDate;
+    </script>
+
+<script>
+    //try ... catch ... finally
+    function checkYear(){
+    const validYear = document.getElementById("validYear");
+    validYear.innerHTML = "";
+    let y = document.getElementById("year").value;
+     try {   
+        if(y > 2023)   throw "should be lower than 2024";
+        if(y < 1900)  throw "should be higher than 1900";   
+      }
+      catch(err) {
+        validYear.innerHTML = "Year value " + err;
+      }
+      finally {
+        document.getElementById("year").value =y +"   " + "Thank you for input";
+      }
+    }
+    </script>
+
+<script>
+    //Strings:
+    let text1 = "thisisalongword";
+    let letter = text1.charAt(0);
+    document.getElementById("charAT").innerHTML = letter;
+    
+    const arr1 = [1, " string ", [3, 4]];
+    const arr2 = [[1, 1], 1, " another string "];
+    const arr3 = arr1.concat(arr2); 
+    document.getElementById("concat").innerHTML = arr3;
+    
+    let testPhrase = "This is a test phrase";
+    let indexOf = testPhrase.indexOf("a");
+    document.getElementById("indexOf").innerHTML = indexOf;
+    
+    let testPhrase2 = "Cosinus SINUS sine SI note simultaneous";
+    let searchSI = testPhrase2.match(/si/gi);
+    document.getElementById("match").innerHTML = searchSI;
+    
+    let testPhrase3 = "Today is Monday";
+    let replaceDay = testPhrase3.replace("Monday", "Tuesday")
+    document.getElementById("replace").innerHTML = replaceDay;
+    
+    let testPhrase4 = "There is a clue here."
+    let searchWord = testPhrase4.search(/clue/);
+    document.getElementById("search").innerHTML = searchWord;
+    
+    let testPhrase5 = "There is a clue here."
+    let split = testPhrase4.split(" ");
+    document.getElementById("split").innerHTML = split;
+    
+    let testPhrase6 = "somethingsomethingsomething";
+    let subString = testPhrase6.substring(7, 9);
+    document.getElementById("substring").innerHTML = subString;
+    
+    let testPhrase7 = "this is uppercase now";
+    let toUpper = testPhrase7.toUpperCase();
+    document.getElementById("uppercase").innerHTML = toUpper;
+    
+    let testPhrase8 = "this shows the text in string";
+    let valueOf = testPhrase8.valueOf();
+    document.getElementById("valueOf").innerHTML = valueOf;
+    </script>
+    
+    <script>
+        //Regex: Number only
+        function checkIfNumberValid (checkNumber) {
+        let patternNumber = /^\d+$/;
+        let result = patternNumber.test(checkNumber);
+        if (result){
+        isNumberValid = "This " + checkNumber + " is a valid number";
+        } else {
+        isNumberValid = "This " + checkNumber + " is not a valid number";
+        }
+        }
+        checkIfNumberValid("123");
+        document.getElementById("message1").innerHTML = isNumberValid;
+        checkIfNumberValid("abc");
+        document.getElementById("message2").innerHTML = isNumberValid;
+        
+        //Regex: Email pattern
+        function checkIfEmailValid (checkEmail){
+        let patternEmail = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm;
+        let emailValid = patternEmail.test(checkEmail);
+        if (emailValid){
+        isEmailValid = "This " + checkEmail + " is a valid email";
+        } else {
+        isEmailValid = "This " + checkEmail + " is not a valid email";
+        }
+        }
+        checkIfEmailValid("user@gmail.com");
+        document.getElementById("email1").innerHTML = isEmailValid;
+        checkIfEmailValid("user#.com.us");
+        document.getElementById("email2").innerHTML = isEmailValid;
+        
+        //Regex: Inbternational phone number
+        function checkIfPhoneValid (checkPhone){
+        let patternPhone = /^(\([0-9]{3}\) |[0-9]{3}-)[0-9]{3}-[0-9]{4}/;
+        let phoneValid = patternPhone.test(checkPhone);
+        if (phoneValid){
+        isPhoneValid = "This " + checkPhone + " is a valid phone number";
+        } else {
+        isPhoneValid = "This " + checkPhone + " is not a valid phone number";
+        }
+        }
+        checkIfPhoneValid("004512216545");
+        document.getElementById("phone1").innerHTML = isPhoneValid;
+        checkIfPhoneValid("(704) 933-3469");
+        document.getElementById("phone2").innerHTML = isPhoneValid;
+        
+        //Regex: File path
+        function checkIfPathValid (checkPath){
+        let patternPath = /^[a-z]:((\\|\/)[a-z0-9\s_@\-^!#$%&+={}\[\]]+)+\.xml$/i;
+        let pathValid = patternPath.test(checkPath);
+        if (pathValid){
+        isPathValid = "This " + checkPath + " is a valid path";
+        } else {
+        isPathValid = "This " + checkPath + " is not a valid path";
+        }
+        }
+        checkIfPathValid("D:|\/folder/test.xml");
+        document.getElementById("path1").innerHTML = isPathValid;
+        checkIfPathValid("D:/test.xml");
+        document.getElementById("path2").innerHTML = isPathValid;
+        
+        //Regex: Find HTML tags
+        function findBold (checkBold){
+        let patternBold = /<[a-z][\s\S]*>/i;
+        let tagBold = patternBold.test(checkBold);
+        if (tagBold){
+        isBold = "This paragraph: " + checkBold + " has bold characters";
+        } else {
+        isBold = "This paragraph:  " + checkBold + " has no bold characters";
+        }
+        }
+        findBold ("///There is something written in bold: <b>something bold</b>.///");
+        document.getElementById("bold1").innerHTML = isBold;
+        findBold ("///There is nothing written in bold.///");
+        document.getElementById("bold2").innerHTML = isBold;
+        
+        </script>
+
+<script>
+    class Person {
+      constructor(name, address, dob, passport) {
+        this.name = name;
+        this.address = address;
+        this.dob = dob;
+        this.passport = passport;
+      }  
+            get name() {
+        return this._name;
+      };
+      set name(newName) {
+        this._name = newName;
+      };    
+      get address() {
+        return this._address;
+      };
+      set address(newAddress) {
+        this._address = newAddress;
+      };     
+        get dob() {
+        return this._dob;
+      };
+      set dob(newDob) {
+        this._dob = newDob;
+      };    
+      get passport() {
+        return this._passport;
+      };
+      set passport(newPassport) {
+        this._passport = newPassport;
+      };     
+      }      
+  </script>
+  
+  <script>     
+    //Objects 
+    const person1 = new Person();
+    person1.name = "John Smith";
+    person1.address = "Country: Romania; Town: Bucharest; Street: 21 Avenue Nr:187";
+    person1.dob = new Date("May 15, 1994");
+    person1.passport = "689652659";
+    
+    const currentDate = new Date();    
+    let miliseconds = currentDate.getTime()- person1.dob.getTime();  
+    let years = miliseconds / 31556952000;
+    let age = Math.floor(years);    
+    
+    document.getElementById("name").innerHTML = "Full name: " + person1.name;
+    document.getElementById("address").innerHTML = "Full address in single line: " + person1.address;
+    document.getElementById("dob").innerHTML = "Date of birth in mm/dd/yyyy format is: " +  person1.dob.toLocaleDateString("en-US");
+    document.getElementById("passport").innerHTML = "Passport number is: " + person1.passport;
+    document.getElementById("age").innerHTML = "John Smith is " + age + " years old.";
+    
+    let address = person1.address;
+	let countryIndex = address.indexOf("Country");
+	let townIndex = address.indexOf("Town");
+	let streetIndex = address.indexOf("Street");
+	let arrayInitialLine = Array.from(address);
+	let arrLength = arrayInitialLine.length;
+	let line1 = arrayInitialLine.slice(0,townIndex-1).join("");
+	let line2 = arrayInitialLine.slice(townIndex, streetIndex-1).join("");
+	let line3 = arrayInitialLine.slice(streetIndex, arrLength).join("");
+	let countryLine = line1.toString();
+	let townLine = line2.toString();
+	let streetLine = line3.toString();
+	document.getElementById("countryLine").innerHTML = countryLine;
+	document.getElementById("townLine").innerHTML = townLine;
+	document.getElementById("streetLine").innerHTML = streetLine;    
+    </script>
+
+
+
+
+
+</body>
+</html>
